@@ -57,6 +57,7 @@ class MyNetwork(AlexNet):
         x = self.avgpool(x)
         x = torch.flatten(x, 1)
         x = self.classifier(x)
+        x = torch.nn.functional.softmax(x, dim=1)
         return x
 
 
