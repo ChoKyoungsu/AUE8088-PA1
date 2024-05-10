@@ -10,7 +10,7 @@ OPTIMIZER_PARAMS    = {'type': 'SGD', 'lr': 0.005, 'momentum': 0.9}
 SCHEDULER_PARAMS    = {'type': 'MultiStepLR', 'milestones': [30, 35], 'gamma': 0.2}
 
 # Dataaset
-DATASET_ROOT_PATH   = 'datasets/'
+DATASET_ROOT_PATH   = '/home/gyeongsu/datasets/'
 NUM_WORKERS         = 8
 
 # Augmentation
@@ -31,7 +31,7 @@ PRECISION_STR       = '32-true'
 
 # Logging
 WANDB_PROJECT       = 'aue8088-pa1'
-WANDB_ENTITY        = os.environ.get('WANDB_ENTITY')
+WANDB_ENTITY        = os.environ.get('whrudtn')
 WANDB_SAVE_DIR      = 'wandb/'
 WANDB_IMG_LOG_FREQ  = 50
 WANDB_NAME          = f'{MODEL_NAME}-B{BATCH_SIZE}-{OPTIMIZER_PARAMS["type"]}'
