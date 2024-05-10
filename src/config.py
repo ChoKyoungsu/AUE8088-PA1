@@ -2,12 +2,13 @@ import os
 
 # Training Hyperparameters
 NUM_CLASSES         = 200
-BATCH_SIZE          = 512
+BATCH_SIZE          = 1024
 VAL_EVERY_N_EPOCH   = 1
 
 NUM_EPOCHS          = 40
-OPTIMIZER_PARAMS    = {'type': 'SGD', 'lr': 0.005, 'momentum': 0.9}
+OPTIMIZER_PARAMS    = {'type': 'SGD', 'lr': 0.01, 'momentum': 0.9}
 SCHEDULER_PARAMS    = {'type': 'MultiStepLR', 'milestones': [30, 35], 'gamma': 0.2}
+PATIENCE = 10
 
 # Dataaset
 DATASET_ROOT_PATH   = '/home/gyeongsu/datasets/'
